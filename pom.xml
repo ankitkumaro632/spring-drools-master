@@ -47,6 +47,16 @@
 			<artifactId>drools-compiler</artifactId>
 			<version>${drools-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-kiesession</artifactId>
+			<version>8.38.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.javatechie</groupId>
+			<artifactId>spring-drools</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

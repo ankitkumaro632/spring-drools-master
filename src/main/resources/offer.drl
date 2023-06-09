@@ -4,9 +4,9 @@ import com.javatechie.spring.drools.api.Order;
 rule "HDFC"
 
 when
-orderObject : Order(cardType=="HDFC" && price>10000);
+orderObject : Order(cardType=="HDFC" && price>8000);
 then
-orderObject.setDiscount(10);
+orderObject.setDiscount(5);
 end;
 
 rule "ICICI"
