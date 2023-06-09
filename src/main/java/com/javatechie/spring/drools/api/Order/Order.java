@@ -1,4 +1,4 @@
-package com.javatechie.spring.drools.api;
+package com.javatechie.spring.drools.api.Order;
 
 public class Order {
 

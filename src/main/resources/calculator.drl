@@ -1,0 +1,29 @@
+import com.javatechie.spring.drools.api.Calculator.SumOperation
+
+
+rule "Calculate Sum"
+when
+    $sumOp: SumOperation()
+then
+    int sum = calculateSum($sumOp.getOperand1(), $sumOp.getOperand2());
+    System.out.println("Sum: " + sum);
+    $sumOp.setResult(sum);
+end
+
+rule "Calculate Difference"
+when
+    $diffOp: SumOperation()
+    $operand2: SumOperation(operand1 == $diffOp.getOperand2())
+then
+    int difference = calculateDifference($diffOp.getOperand1(), $operand2.getOperand2());
+    System.out.println("Difference: " + difference);
+    $diffOp.setResult(difference);
+end
+
+function int calculateSum(int operand1, int operand2) {
+    return operand1 + operand2;
+}
+
+function int calculateDifference(int operand1, int operand2) {
+    return operand1 - operand2;
+}

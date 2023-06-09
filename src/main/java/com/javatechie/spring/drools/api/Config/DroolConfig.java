@@ -1,4 +1,4 @@
-package com.javatechie.spring.drools.api;
+package com.javatechie.spring.drools.api.Config;
 
 import java.io.IOException;
 
@@ -22,7 +22,7 @@ public class DroolConfig {
 	@Bean
 	public KieContainer getKieContainer() {
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		kieFileSystem.write(ResourceFactory.newClassPathResource("offer.drl"));
+		kieFileSystem.write(ResourceFactory.newClassPathResource("calculator.drl"));
 		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
 		kb.buildAll();
 		KieModule kieModule = kb.getKieModule();

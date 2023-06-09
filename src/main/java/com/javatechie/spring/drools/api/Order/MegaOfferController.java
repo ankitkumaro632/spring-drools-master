@@ -1,5 +1,6 @@
-package com.javatechie.spring.drools.api;
+package com.javatechie.spring.drools.api.Order;
 
+import com.javatechie.spring.drools.api.Order.Order;
 import org.drools.core.base.RuleNameEqualsAgendaFilter;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
